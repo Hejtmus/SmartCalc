@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from colorama import init, Fore, Back, Style
 
 os .system("python3 banner_basic_operations.py")
 
@@ -19,7 +20,7 @@ def eoc(): 	#eoc je end of calc
 
 o = input("Operation? [+,-,*,/]")
 if str(o) == "-":
-    print("Difference u can do with summary of negative number")
+    print(Fore.RED+("Difference u can do with summary of negative number"))
 elif str(o) == "/":
 	dividend = input("Enter dividend: ")
 	denominator = input("Enter denominator: ")
@@ -31,7 +32,7 @@ elif str(o) == "/":
 		print(" ")
 
 
-print (("Enter numbers, to end press Enter without inserting number"))
+print (Fore.BLUE+("Enter numbers, to end press Enter without inserting number")+Fore.WHITE)
 
 total = 0
 difference = 0
@@ -44,9 +45,16 @@ while True:
     if line:
         try:
             number = float(line)
-        except ValueError as err:
-            print(err)
+        except ValueError as verr:
+
+            print(Fore.RED+str(verr))
+            print(Fore.WHITE)
             continue
+        except TypeError as terr:
+            print(Fore.RED+str(terr))
+            print(Fore.WHITE)
+            continue
+            
         total += number
         count += 1
         multiply *= number
