@@ -17,7 +17,7 @@ if o == 'p' or o == 'P':
 		except ValueError as verr:
 			print(verr)
 			continue
-elif o == 'r' or o == 'R':
+elif o == 'r' or o == 'R': #note - this is currently WIP
 	root = 0
 	while root == 0:
 		try:
