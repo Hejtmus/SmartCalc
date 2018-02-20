@@ -1,18 +1,10 @@
 #!/usr/bin/python3
 
 import os
+from definitions import eoc
+
 os .system("./banner_triangle.py")
 
-def eoc(): 	#eoc je end of calc
-	import time
-	while True:
-		end = input("Done? [Y/n]")
-		if end == "Y":
-			print("ok")
-			break
-		elif end == "n":
-			os .system("cd SmartCalc/")
-			os .system("./menu.sh")
 while True:
 	try:
 		a = input("Side a = ")

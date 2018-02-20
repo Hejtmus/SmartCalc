@@ -1,0 +1,38 @@
+#!/bin/bash
+
+clear
+
+echo Installing
+echo
+chmod +x terms_of_use.py
+
+python3 terms_of_use.py
+
+read -p "[Agree/Disagree]" tou #tou = terms of use
+if [[ $tou == "Agree" ]]; then
+	sudo apt-get install python3
+	sudo apt-get install python3-pip
+	sudo pip3 install colorama
+	sudo pip3 install math
+	chmod +x *
+	sudo mkdir /etc/SmartCalc/
+	sudo cp * /etc/SmartCalc/
+	sudo cp SmartCalc /bin
+	sudo chmod 777 /etc/SmartCalc/
+
+	clear
+
+	echo
+	echo "Done, calculator will be launched after 3 sec."
+	echo "3"
+	sleep 1
+	echo "2"
+	sleep 1
+	echo "1"
+	sleep 1
+	echo "0"
+
+	bash menu
+elif [[ $tou == "Disagree" ]]; then
+	echo "Sad :/"
+fi

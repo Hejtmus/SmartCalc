@@ -7,7 +7,6 @@ print("  | |  __/ |  | | | | | \__ \ | (_) |  _| | |_| \__ \  __/ ")
 print("  |_|\___|_|  |_| |_| |_|___/  \___/|_|    \__,_|___/\___| ")
 print("	")
 
-print("1. I will don't use this programm for commercial use (except students)")
-print("2. I will don't public as my own project")
+print('1. I agree with GPL-3.0')
 print("Bonus: If you want you can send me a idea or code of plugin for this programm")
 print("This is all")
