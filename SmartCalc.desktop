@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Smart Calc
+Exec=SmartCalc
+
+Terminal=true
+Type=Application
+StartupNotify=true
+X-Desktop-File-Install-Version=0.15
