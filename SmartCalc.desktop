@@ -1,8 +1,8 @@
 [Desktop Entry]
-Version=1.0
+Icon=/etc/SmartCalc/Sc.png
 Name=Smart Calc
 Exec=SmartCalc
-
+Comment=Clever app for clever people
 Terminal=true
 Type=Application
 StartupNotify=true
