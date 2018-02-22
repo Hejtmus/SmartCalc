@@ -6,4 +6,6 @@ Comment=Clever app for clever people
 Terminal=true
 Type=Application
 StartupNotify=true
+Categories=Utility;Calculator;
 X-Desktop-File-Install-Version=0.15
+Keywords=calc;calculator;kalk;kalkulator;sc;smartcalc;smartc;smartulator;calcsmart;kalkulacka;solver;math;
