@@ -17,7 +17,7 @@ apps:
 parts:
   smartcalc:
     # See 'snapcraft plugins'
-    plugin: autotools
+    plugin: nil
     install:  |
       sudo mkdir -p /etc/SmartCalc/
       sudo apt-get install python3
