@@ -4,8 +4,8 @@ summary: Simple, fast and mostly Smart Calc # 79 char long summary
 description: |
   Amazing calc which can solve different math problems.
 
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
 icon: SmartCalc.png
 type: app
 
