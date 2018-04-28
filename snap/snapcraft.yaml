@@ -18,13 +18,11 @@ parts:
   smartcalc:
     # See 'snapcraft plugins'
     plugin: autotools
-    prepare:  |
+    install:  |
       sudo mkdir -p /etc/SmartCalc/
-    prepare:  |
       sudo apt-get install python3
       sudo apt-get install python3-pip
       sudo pip3 install colorama
-    install:  |
       sudo mv -f SmartCalc /bin
       sudo mv -f SmartCalc.desktop /usr/share/applications
       sudo mv -f * /etc/SmartCalc
