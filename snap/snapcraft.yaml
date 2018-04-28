@@ -20,9 +20,6 @@ parts:
     plugin: autotools
     prepare:  |
       sudo mkdir -p /etc/SmartCalc/
-    build:  |
-      echo done
-
     prepare:  |
       sudo apt-get install python3
       sudo apt-get install python3-pip
