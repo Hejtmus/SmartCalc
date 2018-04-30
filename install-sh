@@ -19,7 +19,7 @@ if [[ $tou == "Agree" ]]; then
 	sudo cp * /etc/SmartCalc/
 	sudo cp SmartCalc /bin
 	sudo chmod 777 /etc/SmartCalc/
-	sudo mv SmartCalc.desktop /usr/share/applications
+	sudo cp SmartCalc.desktop /usr/share/applications
 
 	clear
 

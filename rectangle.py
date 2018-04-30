@@ -2,9 +2,9 @@
 
 import os
 from definitions import eoc
+from banner import rect
 
-os .system("./banner_rectangle.py")
-print ("	")
+print (rect)
 
 while True:
 	a = input("Side a = ")
