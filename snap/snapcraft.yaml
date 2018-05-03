@@ -19,10 +19,4 @@ parts:
     # See 'snapcraft plugins'
     plugin: nil
     install:  |
-      sudo mkdir -p /etc/SmartCalc/
-      sudo apt-get install python3
-      sudo apt-get install python3-pip
-      sudo pip3 install colorama
-      sudo mv -f SmartCalc /bin
-      sudo mv -f SmartCalc.desktop /usr/share/applications
-      sudo mv -f * /etc/SmartCalc
+      dpkg smartcalc_0.2.0-2_amd64.deb -i
