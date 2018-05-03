@@ -18,5 +18,5 @@ parts:
   smartcalc:
     # See 'snapcraft plugins'
     plugin: nil
-    install:  |
-      dpkg smartcalc_0.2.0-2_amd64.deb -i
+    source: ../smartcalc/_0.2.0-2_amd64.deb
+
