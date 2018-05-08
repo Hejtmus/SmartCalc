@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url("font/Ubuntu-R.ttf");
+}
+
 h1 {
     color: #ffffff;
     text-align: center;
