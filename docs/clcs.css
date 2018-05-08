@@ -54,7 +54,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 2px;
-    overflow: hidden;
     background-color: #944646;
     font-family: "Ubuntu";
     position: sticky;
@@ -130,9 +129,7 @@ footer {
 }
 
 div {
-    display: list-item block;
     content: '';
-    display: table;
     clear: both;
 
 }
@@ -166,6 +163,13 @@ button:active {
     transform: translateY(8px);
     background-color: #CE6363;
 }
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
 .dropdown {
     position: relative;
@@ -178,12 +182,25 @@ button:active {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
     z-index: 1;
 }
 
+.dropdown-content a li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #B0B052;
+
 }
 
 input{
