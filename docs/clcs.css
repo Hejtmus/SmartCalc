@@ -1,0 +1,240 @@
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Ubuntu";
+    margin-bottom: 1cm;
+}
+
+p {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    text-align: center;
+    float: center;
+    margin-bottom: 1.5cm;
+    font-size: large;
+
+}
+
+#lu {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    text-align: center;
+
+}
+
+#ru {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    text-align: center;
+
+}
+
+#dc {
+    vertical-align: center;
+    horiz-align: center;
+    text-align: center;
+    display: inline;
+    width: 100%;
+}
+
+h1.hl {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Ubuntu";
+    text-align: center;
+}
+
+body {
+    background-image: url("img/math.jpg");
+    background-color: #944646;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    overflow: hidden;
+    background-color: #944646;
+    font-family: "Ubuntu";
+    position: sticky;
+    top: 1px;
+}
+
+nav{
+    position: sticky;
+}
+
+li {
+    float: left;
+}
+
+#lir {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #B0B052;
+}
+
+li a.cur {
+    background-color: #B0B052;
+}
+
+img:hover
+{
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    float: center;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    padding-bottom: 1cm;
+
+}
+
+#li {
+    margin-left: 150px;
+    float: left;
+    width: 50%;
+
+}
+
+#ri {
+    margin-right: 150px;
+    float: right;
+    width: 50%;
+
+}
+
+footer {
+    background-color: #797575;
+    text-align: center;
+    font-family: "Ubuntu";
+    padding: 18px;
+
+}
+
+div {
+    display: list-item block;
+    content: '';
+    display: table;
+    clear: both;
+
+}
+
+a {
+    color:white;
+}
+
+button {
+    border-radius: 12px;
+    background-color: #FF0000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: center;
+    margin-left: 10px;
+    cursor: pointer;
+    display: horizontal;
+    float: center;
+    vertical-align: center;
+    border: none;
+    margin: 15px;
+}
+button:hover {background-color: #898080}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(8px);
+    background-color: #CE6363;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+input{
+    height: 4px;
+    vertical-align: center;
+    horiz-align: center"
+}
+
+@media screen and (max-width: 749px) {
+    body {
+        background-color: #5e2750;
+        background-repeat: no-repeat;
+        background-position: fill;
+        margin: 5px;
+    }
+    p {
+        color: #ffffff;
+        font-family: "Ubuntu";
+        text-align: center;
+        float: center;
+        margin-bottom: 1cm;
+        font-size: medium;
+
+    }
+    ul {position: relative;}
+    ul.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    li {
+        visibility: hidden;
+    }
+    nav{
+        display: flex;
+    }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
