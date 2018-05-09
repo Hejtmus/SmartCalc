@@ -4,9 +4,9 @@
     <link rel="icon" type="png" href="img/sc.png" width="38%">
     <title>SmartCalc</title>
     <style>
-        @font-face{
+        @font-face {
             font-family: Ubuntu;
-            src: url("font/Ubuntu-R.ttf")
+            src: url("font/Ubuntu-R.ttf");
         }
         p.ubf{
             color: #ffffff;
@@ -28,7 +28,7 @@
             background-position: fill;
         }
 
-        .button {
+        button {
             border-radius: 12px;
             background-color: #FF0000;
             color: white;
@@ -45,11 +45,12 @@
             vertical-align: center;
             border: none;
             margin: 15px;
+            font-family: Ubuntu;
         }
 
-        .button:hover {background-color: #898080}
+        button:hover {background-color: #898080}
 
-        .button:active {
+        button:active {
             box-shadow: 0 5px #666;
             transform: translateY(8px);
             background-color: #CE6363;
@@ -80,11 +81,11 @@
 <h1 class="ubf">SmartCalc</h1>
 <img src="img/sc.png" alt="SCalc" width="25%" style="display:block;margin-left:auto;margin-right:auto;"> <!--viem,že to logo je hrozné ale nemám photoshop tak som to robil najprv v 3d skicari a poto malá úprava v GIMPe-->
 <ul>
-    <button class="button" onclick="window.location.href='Stranka.html'">Slovak version</button>
-    <button class="button" onclick="window.location.href='https://github.com/Hejtmus/SmartCalc'">Github</button>
+    <button onclick="window.location.href='Stranka.html'">Slovak version</button>
+    <button onclick="window.location.href='https://github.com/Hejtmus/SmartCalc'">Github</button>
 </ul>
 
 
-<footer style="margin-top: 30px; float: bottom">Filip Holčík</footer>
+<footer style="margin-top: 30px">Filip Holčík</footer>
 </body>
 </html>
