@@ -1,0 +1,25 @@
+smartcalc (0.2.0-4) unstable; urgency=medium
+
+  * Fixed crashes - resistor.py, definitions.py
+
+ -- Filip Holčík < filip.holcik.official@gmail.com>  Mon, 7 May 2018 16:42:00 +0200
+
+smartcalc (0.2.0-3) unstable; urgency=medium
+
+  * Fixed some bugs
+
+ -- Filip Holčík < filip.holcik.official@gmail.com>  Wed, 2 May 2018 15:47:00 +0200
+
+smartcalc (0.2.0-2) unstable; urgency=medium
+
+  * Fixed errors:
+  -Fixed crashes (definitions.py)
+  -Fixed importing colorama
+
+ -- Filip Holčík <filip123h@gmail.com>  Wed, 2 May 2018 10:04:30 +0200
+
+smartcalc (0.2.0-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Filip Holčík <filip123h@gmail.com>  Sun, 29 Apr 2018 10:39:55 +0200

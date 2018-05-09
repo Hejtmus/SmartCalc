@@ -1,0 +1,120 @@
+#!/usr/bin/make -f
+
+icon = $(CURDIR)/SmartCalc.png
+script = $(CURDIR)/smartcalc/*
+launcher = $(CURDIR)/SmartCalc.desktop
+term = $(CURDIR)/SmartCalc
+user = $(CURDIR)/user/*
+sci = $(CURDIR)/SmartCalc.svg
+
+DEST1 = $(CURDIR)/debian/smartcalc/bin
+DEST2 = $(CURDIR)/debian/smartcalc/usr/share
+DEST3 = $(DEST2)/smartcalc
+DEST4 = $(DEST2)/applications
+DEST5 = $(DEST3)/icon
+DEST6 = $(DEST2)/icon/hicolor
+DEST7 = $(DEST6)/scalable
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm  -f build-stamp
+	dh_clean
+
+install: build clean $(icon) $(script) $(launcher) $(term) $(sci)
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	mkdir -p -m 666 $(DEST1)
+	mkdir -p -m 777 debian/smartcalc/usr
+	mkdir -p -m 777 $(DEST2)
+	mkdir -p -m 777 $(DEST3)
+	mkdir -p -m 777 $(DEST3)/user
+	mkdir -p -m 666 $(DEST4)
+	mkdir -p -m 777 $(DEST5)
+	mkdir -p -m 777 $(DEST6)
+	mkdir -p -m 777 $(DEST7)
+
+	install -m 666 $(term) $(DEST1)
+	install -m 777 $(script) $(DEST3)
+	install -m 777 $(icon) $(DEST5)
+	install -m 777 $(sci) $(DEST7)
+	install -m 777 $(user) $(DEST3)/user
+	install -m 666 $(launcher) $(DEST4)
+
+	#sudo apt-get install python3
+	#sudo apt-get install python3-pip
+
+#uninstall:
+#	rm -r $(DEST3)
+#	rm -r $(DEST1)/SmartCalc
+#	rm -r $(DEST4)/SmartCalc.desktop
+#	rm -r $(DEST8)/SmartCalc.svg
+
+build:
+	dh_testdir
+	dh_auto_configure
+	dh_auto_build
+	dh_auto_test
+	touch build-stamp
+
+binary: build install
+	dh_testroot
+	dh_installdirs
+	dh_auto_install
+	dh_install
+	dh_installdocs
+	dh_installchangelogs
+	dh_installexamples
+	dh_installman
+	dh_installcatalogs
+	dh_installcron
+	dh_installdebconf
+	dh_installemacsen
+	dh_installifupdown
+	dh_installinfo
+	dh_installinit
+	dh_installmenu
+	dh_installmime
+	dh_installmodules
+	dh_installlogcheck
+	dh_installlogrotate
+	dh_installpam
+	dh_installppp
+	dh_installudev
+	dh_installwm
+	dh_installxfonts
+	dh_bugfiles
+	dh_lintian
+	dh_gconf
+	dh_icons
+	dh_perl
+	dh_usrlocal
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_strip
+	dh_makeshlibs
+	dh_shlibdeps
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-indep: build install binary
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_link
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
