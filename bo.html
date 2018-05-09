@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="img/live">
+    <title>Live Calc</title>
+    <link rel="stylesheet" type="text/css" href="clcs.css">
+    <script src="logic.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1><mark>Live Calc</mark></h1>
+
+<nav>
+    <ul>
+        <div class="dropdown">
+            <li><a class="dropbtn">Snippety</a></li>
+            <div class="dropdown-content">
+                <li><a href="snippet.html">Snippety</a></li>
+                <li><a href="Install.html">install.py</a></li>
+                <li><a href="Menu.html">menu.sh</a> </li>
+                <li><a href="Calc.html">Calc.py</a></li>
+                <li><a href="Ol.html">Ohms_law.py</a></li>
+            </div>
+        </div>
+        <li id="lir"><a href="Live_SmartCalc.html">LiveCalc</a></li>
+        <li id="lir"><a href="Stranka.html">Hlavná stránka</a></li>
+    </ul>
+</nav>
+<section id="dc" style="alignment: center;text-align: center">
+    <div id="dc" style="width: 100%;display: inline;vertical-align: center;horiz-align: center">
+        <p>Základné operácie</p>
+        <p id="mopr">Vyber operáciu</p>
+        <select>
+            <option onclick="document.getElementById('mopr').innerHTML = ('Vyber operáciu'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'none';document.getElementById('rob').style.display = 'none'; op = 1" selected="selected">Zatiaľ si si nevybral</option>
+            <option onclick="document.getElementById('mopr').innerHTML = ('Sčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 2">Sčítavanie</option>
+            <option onclick="document.getElementById('mopr').innerHTML = ('Odčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 3">Odčítavanie</option>
+            <option onclick="document.getElementById('mopr').innerHTML = ('Násobenie'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 4">Násobenie</option>
+            <option onclick="document.getElementById('mopr').innerHTML = ('Delenie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 5">Delenie</option>
+        </select>
+        <div id="dc" style="align-self: center;text-align: center;vertical-align: center;horiz-align: center">
+            <input style="display: none" type="number" name="1" id="fst" placeholder="Číslo">
+            <input style="display: none" type="number" name="2" id="scnd" placeholder="Číslo">
+            <button style="display: none" id="rob" onclick="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">Rob!</button>
+            <p id="mlt">0</p>
+        </div>
+    </div>
+</section>
+
+<footer>Filip Holčík</footer>
+</body>
+</html>
