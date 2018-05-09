@@ -20,6 +20,11 @@ p {
 
 }
 
+mark {
+    background-color: #0e5315;
+    color: white;
+}
+
 #lu {
     color: #ffffff;
     font-family: "Ubuntu";
