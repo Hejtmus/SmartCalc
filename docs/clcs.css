@@ -2,6 +2,74 @@
     font-family: Ubuntu;
     src: url("font/Ubuntu-R.ttf");
 }
+.bcgr {
+    background-size:800% 100%;
+    -webkit-animation:bckgr 90s ease infinite;
+    animation:bckgr 90s ease infinite;
+    animation-duration: 90ms;
+}
+
+@keyframes bcgr {
+    0% {
+        background-color: #a1e2e8;
+        transform: rotate(0deg);
+    }
+    5% {
+
+        background-color: #4beabe;
+        transform: rotate(0deg);
+    }
+    13% {
+        background-color: #d0e279;
+        transform: rotate(0deg);
+    }
+    19% {
+        background-color: #fad543;
+        rotation: 0deg;
+    }
+    25% {
+        background-color: #efd46f;
+    }
+    31% {
+        background-color: #a1e2e8;
+    }
+    38% {
+        background-color: #6ce8e6;
+    }
+    44% {
+        background-color: #50e89c;
+    }
+    50% {
+        background-color: #60e858;
+    }
+    56% {
+        background-color: #b8e872;
+    }
+    63% {
+        background-color: #e8b482;
+    }
+    69% {
+        background-color: #e8c5d6;
+    }
+    75% {
+        background-color: #e48ee8;
+    }
+    81% {
+        background-color: #b280e8;
+    }
+    88% {
+        background-color: #7276e8;
+    }
+    94% {
+        background-color: #7ca3e8;
+    }
+    99% {
+        background-color: #8acefa;
+    }
+    to {
+        background-color: #a1e2e8;
+    }
+}
 
 h1 {
     color: #ffffff;
@@ -55,9 +123,13 @@ h1.hl {
 }
 
 body {
-    background-image: url("img/math.jpg");
-    background-color: #944646;
+    /*background-image: url("img/math.jpg");
+    background-color: #944646;*/
     margin: 10px;
+    -webkit-animation: bcgr 20s infinite;
+    animation: bcgr 50s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
 }
 
 ul {
@@ -214,13 +286,14 @@ input{
     horiz-align: center"
 }
 
+
 @media screen and (max-width: 749px) {
-    body {
+    /*body {
         background-color: #5e2750;
         background-repeat: no-repeat;
         background-position: fill;
         margin: 5px;
-    }
+    }*/
     p {
         color: #ffffff;
         font-family: "Ubuntu";
