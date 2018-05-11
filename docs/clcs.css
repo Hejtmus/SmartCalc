@@ -11,63 +11,59 @@
 
 @keyframes bcgr {
     0% {
-        background-color: #a1e2e8;
-        transform: rotate(0deg);
+        background: #a1e2e8 0 143%;
     }
     5% {
 
-        background-color: #4beabe;
-        transform: rotate(0deg);
+        background: #4beabe 9% 20%;
     }
     13% {
-        background-color: #d0e279;
-        transform: rotate(0deg);
+        background: #d0e279 17% 120%;
     }
     19% {
-        background-color: #fad543;
-        rotation: 0deg;
+        background: #fad543 25% 12%;
     }
     25% {
-        background-color: #efd46f;
+        background: #efd46f 32% 60%;
     }
     31% {
-        background-color: #a1e2e8;
+        background: #a1e2e8 40% 80%;
     }
     38% {
-        background-color: #6ce8e6;
+        background: #6ce8e6 48% 32%;
     }
     44% {
-        background-color: #50e89c;
+        background: #50e89c 57% 0;
     }
     50% {
-        background-color: #60e858;
+        background: #60e858 65% 18%;
     }
     56% {
-        background-color: #b8e872;
+        background: #b8e872 73% 0;
     }
     63% {
-        background-color: #e8b482;
+        background: #e8b482 81% 100%;
     }
     69% {
-        background-color: #e8c5d6;
+        background: #e8c5d6 89% 0;
     }
     75% {
-        background-color: #e48ee8;
+        background: #e48ee8 97% 30%;
     }
     81% {
-        background-color: #b280e8;
+        background: #b280e8 105% 0;
     }
     88% {
-        background-color: #7276e8;
+        background: #7276e8 113% 80%;
     }
     94% {
-        background-color: #7ca3e8;
+        background: #7ca3e8 120% 0;
     }
     99% {
-        background-color: #8acefa;
+        background: #8acefa 127% 10%;
     }
     to {
-        background-color: #a1e2e8;
+        background: #a1e2e8 134% 80%;
     }
 }
 
@@ -126,10 +122,10 @@ body {
     /*background-image: url("img/math.jpg");
     background-color: #944646;*/
     margin: 10px;
-    -webkit-animation: bcgr 20s infinite;
-    animation: bcgr 50s infinite;
-    -webkit-animation-direction: alternate;
+    -webkit-animation: bcgr 110s ease infinite;
+    animation: bcgr 110s ease infinite;
     animation-direction: alternate;
+    -webkit-animation-direction: alternate;
 }
 
 ul {
