@@ -18,16 +18,16 @@
         background: #4beabe 9% 20%;
     }
     13% {
-        background: #d0e279 17% 120%;
+        background: #d0e279 17% 40%;
     }
     19% {
-        background: #fad543 25% 12%;
+        background: #fad543 25% 10%;
     }
     25% {
-        background: #efd46f 32% 60%;
+        background: #efd46f 32% 20%;
     }
     31% {
-        background: #a1e2e8 40% 80%;
+        background: #a1e2e8 40% 60%;
     }
     38% {
         background: #6ce8e6 48% 32%;
@@ -138,7 +138,7 @@ ul {
     top: 1px;
 }
 
-nav{
+nav {
     position: sticky;
 }
 
