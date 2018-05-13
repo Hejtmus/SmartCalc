@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Snippety</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">SmartCalc</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Snippety</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Menu.sh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Calc.py</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Ohms_law.py</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <header class="masthead color">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Snippety</h1>
+              <h2 class="subheading">Časti zdrojového kódu</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading" id="snippet">
+              Čo sú Snippety?
+            </h2>
+
+            <p>
+              Z anglického slova "snippet" - útržok. V tejto sekcii si ukážeme takmer celý kód časti programu a útržky z neho vám vysvetlím.
+              Keď pôjdete kurzorom na obrázok, zväčší sa, ak ste na telefóne podržte obrázok. Vysvetlenia sú písané v programátorskom slangu.
+            </p>
+
+            <h2 class="section-heading" id="install">
+              Install.sh
+            </h2>
+
+            <p>
+              Na začiatok by som predstavil script "Install.sh". Bol to nenahraditeľný skript tohto programu, bez jeho vykonania nebolo možné
+              používať kalkulačku SmartCalc avšak nedávno som ho nahradil inštalačným balíkom .deb (Slúžia na inštalaćiu programov v Debiane - distribúcia Linuxu).
+            </p>
+
+            <img class="img-fluid" src="../img/inst1.png">
+
+            <p>
+              Ako môžete vidieť, dal som ifovník ktorý sa vás pýta či šúhlasíte s podmienkamy používania, ak požívatel súhlasí script nainštaluje potrebné
+              balíky ktoré sú potrebné na správne fungovanie programu a nasledne spusti <a href='Menu.html'>Menu.sh</a>.
+            </p>
+
+            <img class="img-fluid" src="../img/inst2.png">
+
+            <p>
+              A ak nesúhlasíte s podmienkami používania, program vám napíše "Sad :/". Else by tam nemohlo byť lebo keby používatel zadal napríklad "dfjbjk" bralo by to ako "Disagree".
+            </p>
+
+            <blockquote class="blockquote"></blockquote>
+
+            <h2 class="section-heading" id="menu">
+              Menu.sh
+            </h2>
+
+            <p>
+              Menu.sh slúži ako menu vštkých skriptov, preto sa to tak volá. Keď spustíte SmartCalc pomocou ikony tak sa vykoná práve tento skript,
+              funguje ako srdce programu a spája všetky skripty dokopy. Usúdil som že na túto funkciu bude Bash najlepší. Banner.py vám 'vyprintuje'
+              všetky možnosti. Zvyšok je 'ifovník' pri ktorom je každý elif jeden skript.
+            </p>
+
+            <h2 class="section-heading">
+              Calc.py
+            </h2>
+
+            <p>
+
+            </p>
+            <h2 class="section-heading">
+              Ohms_law.py
+            </h2>
+
+            <p>
+
+            </p>
+
+            <a href="#">
+              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+            </a>
+            <span class="caption text-muted"></span>
+
+            <p></p>
+
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/Hejtmus/SmartCalc">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; hejtmus.github.io/SmartCalc 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
