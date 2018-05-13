@@ -94,7 +94,7 @@
 
             <p>
               Ako môžete vidieť, dal som ifovník ktorý sa vás pýta či šúhlasíte s podmienkamy používania, ak požívatel súhlasí script nainštaluje potrebné
-              balíky ktoré sú potrebné na správne fungovanie programu a nasledne spusti <a href='Menu.html'>Menu.sh</a>.
+              balíky ktoré sú potrebné na správne fungovanie programu a nasledne spusti <a href='#menu'>menu.sh</a>.
             </p>
 
             <img class="img-fluid" src="../img/inst2.png">
@@ -109,20 +109,61 @@
               Menu.sh
             </h2>
 
+            <img class="img-fluid" src="../img/mn.png">
+
             <p>
               Menu.sh slúži ako menu vštkých skriptov, preto sa to tak volá. Keď spustíte SmartCalc pomocou ikony tak sa vykoná práve tento skript,
               funguje ako srdce programu a spája všetky skripty dokopy. Usúdil som že na túto funkciu bude Bash najlepší. Banner.py vám 'vyprintuje'
               všetky možnosti. Zvyšok je 'ifovník' pri ktorom je každý elif jeden skript.
             </p>
 
-            <h2 class="section-heading">
+            <img class="img-fluid" src="../img/mn2.png">
+
+            <p>
+              Koniec skriptu teda 5 krát echo je zbytočné lebo si to všimnete iba keď zle zadáte možnosť (nie ako else), teda by vás ifovník nehodil do
+              ďalšieho skriptu. Pokiaľ by ste dali správnu možnosť, tých 5 prázdnych riadkov by ste nevydeli lebo by skript spravil ešte pred tým "clear".
+            </p>
+
+            <h2 class="section-heading" id="calc">
               Calc.py
             </h2>
 
-            <p>
+            <img class="img-fluid" src="../img/clc.png">
 
+            <p>
+              Importoval som "os" aby som mohol vykonávať príkazy konkrétne dostať sa do zložky SmartCalc a znova spustiť. Potom sa vás <a href='#menu'>menu.sh</a> spýta akú
+              operáciu chcete vykonať.
             </p>
-            <h2 class="section-heading">
+
+            <table style="margin-top: 2cm;border-collapse: separate; border: #000000 2px">
+              <tr>
+                <th>Operácia</th>
+                <th>+</th>
+                <th>-</th>
+                <th>*</th>
+                <th>/</th>
+              </tr>
+              <tr>
+                <th>Spôsob vykonania</th>
+                <td>+=</td>
+                <td>+=</td>
+                <td>*=</td>
+                <td>divident/denominator</td>
+              </tr>
+              <tr>
+                <th>Komentár</th>
+                <td>-</td>
+                <td>používateľ vkladá záporné čísla</td>
+                <td>-</td>
+                <td>používatel 2 zadá čísla</td>
+              </tr>
+            </table>
+
+            <blockquote class="blockquote">
+              Toto je tabulka operácii a ako som to vpísal do skriptu.
+            </blockquote>
+
+            <h2 class="section-heading" id="ohm">
               Ohms_law.py
             </h2>
 
