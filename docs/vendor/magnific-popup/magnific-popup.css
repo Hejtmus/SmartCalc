@@ -349,3 +349,37 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+/*Moja časť :D*/
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("font/Ubuntu-R.ttf");
+}
+.bcgr {
+    background-size:800% 100%;
+    -webkit-animation:bckgr 10s ease infinite;
+    animation:bckgr 10s ease infinite;
+    animation-duration: 10s;
+}
+
+@keyframes bcgr {
+    0% {
+        background: #424242 0 0;
+    }
+    50%{
+        background: #5b8d9e 0 0;
+    }
+
+    to {
+        background: #a35454 0 0;
+    }
+}
+
+header {
+  -webkit-animation: bcgr 10s ease infinite;
+   animation: bcgr 10s ease infinite;
+   animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+
