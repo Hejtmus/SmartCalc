@@ -376,12 +376,78 @@ img.mfp-img {
     }
 }
 
-header {
+header, .color-r {
   -webkit-animation: bcgr 10s ease infinite;
    animation: bcgr 10s ease infinite;
    animation-direction: alternate;
   -webkit-animation-direction: alternate;
 }
+
+.color-a {
+    background-size:800% 100%;
+    -webkit-animation:color-a 90s ease infinite;
+    animation:color-a 90s ease infinite;
+    animation-duration: 90s;
+}
+
+@keyframes color-a {
+    0% {
+        background: #36437d 0 143%;
+    }
+    5% {
+
+        background: #296527 9% 20%;
+    }
+    13% {
+        background: #525b2e 17% 40%;
+    }
+    19% {
+        background: #665922 25% 10%;
+    }
+    25% {
+        background: #5b512a 32% 20%;
+    }
+    31% {
+        background: #68537e 40% 60%;
+    }
+    38% {
+        background: #6a323b 48% 32%;
+    }
+    44% {
+        background: #2e885c 57% 0;
+    }
+    50% {
+        background: #2d6829 65% 18%;
+    }
+    56% {
+        background: #516834 73% 0;
+    }
+    63% {
+        background: #6f563e 81% 100%;
+    }
+    69% {
+        background: #726169 89% 0;
+    }
+    75% {
+        background: #815083 97% 30%;
+    }
+    81% {
+        background: #534070 105% 0;
+    }
+    88% {
+        background: #373970 113% 80%;
+    }
+    94% {
+        background: #3a4e6b 120% 0;
+    }
+    99% {
+        background: #334c5c 127% 10%;
+    }
+    to {
+        background: #466164 134% 80%;
+    }
+}
+
 
 .ico {
   height: 80px;
