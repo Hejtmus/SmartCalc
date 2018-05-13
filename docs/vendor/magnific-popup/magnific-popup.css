@@ -383,3 +383,7 @@ header {
   -webkit-animation-direction: alternate;
 }
 
+.ico {
+  height: 80px;
+  margin: 5px;
+}
