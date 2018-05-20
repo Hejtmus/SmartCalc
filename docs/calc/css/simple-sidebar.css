@@ -1,0 +1,208 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+/*zasa moja cast*/
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("font/Ubuntu-R.ttf");
+}
+.bcgr {
+  background-size:800% 100%;
+  -webkit-animation:bckgr 90s ease infinite;
+  animation:bckgr 90s ease infinite;
+  animation-duration: 90ms;
+}
+
+@keyframes bcgr {
+  0% {
+    background: #a1e2e8 0 0;
+  }
+  5% {
+
+    background: #4beabe 9% 0;
+  }
+  13% {
+    background: #cde277 17% 0;
+  }
+  19% {
+    background: #fada54 25% 0;
+  }
+  25% {
+    background: #efd46f 32% 0;
+  }
+  31% {
+    background: #a1e2e8 40% 0;
+  }
+  38% {
+    background: #6ce8e6 48% 0;
+  }
+  44% {
+    background: #50e89c 57% 0;
+  }
+  50% {
+    background: #60e858 65% 18%;
+  }
+  56% {
+    background: #b8e872 73% 0;
+  }
+  63% {
+    background: #e8b482 81% 0;
+  }
+  69% {
+    background: #e8c5d6 89% 0;
+  }
+  75% {
+    background: #e48ee8 97% 0;
+  }
+  81% {
+    background: #b280e8 105% 0;
+  }
+  88% {
+    background: #7276e8 113% 0;
+  }
+  94% {
+    background: #7ca3e8 120% 0;
+  }
+  99% {
+    background: #8acefa 127% 0;
+  }
+  to {
+    background: #a1e2e8 134% 0;
+  }
+}
+
+body {
+  margin: 10px;
+  -webkit-animation: bcgr 110s ease infinite;
+  animation: bcgr 110s ease infinite;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+
+aside {
+  float: left;
+  background-color: black;
+  list-style-type: none;
+  padding: 0;
+  visibility: visible;
+}
+
