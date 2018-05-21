@@ -453,3 +453,7 @@ header, .color-r {
   height: 80px;
   margin: 5px;
 }
+
+.full {
+    height: 100%;
+}
