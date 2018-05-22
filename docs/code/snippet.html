@@ -101,32 +101,31 @@
               používať kalkulačku SmartCalc avšak nedávno som ho nahradil inštalačným balíkom .deb (Slúžia na inštalaćiu programov v Debiane - distribúcia Linuxu).
             </p>
             <pre>
-              <!-- language: lang-bash -->
               <code class="prettyprint lang-bash">
-                #!/bin/bash
+      #!/bin/bash
 
-                clear
+      clear
 
-                echo Installing
-                echo
-                chmod +x terms_of_use.py
+      echo Installing
+      echo
+      chmod +x terms_of_use.py
 
-                python3 terms_of_use.py
+      python3 terms_of_use.py
 
-                read -p "[Agree/Disagree]" tou #tou = terms of use
-                if [[ $tou == "Agree" ]]; then
-                sudo apt-get install python3
-                sudo apt-get install python3-pip
-                sudo pip3 install colorama
-                sudo pip3 install math
-                chmod +x *
-                sudo mkdir /etc/SmartCalc/
-                sudo cp * /etc/SmartCalc/
-                sudo cp SmartCalc /bin
-                sudo chmod 777 /etc/SmartCalc/
-                sudo cp SmartCalc.desktop /usr/share/applications
+      read -p "[Agree/Disagree]" tou #tou = terms of use
+      if [[ $tou == "Agree" ]]; then
+      sudo apt-get install python3
+      sudo apt-get install python3-pip
+      sudo pip3 install colorama
+      sudo pip3 install math
+      chmod +x *
+      sudo mkdir /etc/SmartCalc/
+      sudo cp * /etc/SmartCalc/
+      sudo cp SmartCalc /bin
+      sudo chmod 777 /etc/SmartCalc/
+      sudo cp SmartCalc.desktop /usr/share/applications
 
-                clear
+      clear
             </code>
             </pre>
 
@@ -137,20 +136,20 @@
 
             <pre>
               <code class="prettyprint lang-bash">
-                  echo
-                  echo "Done, calculator will be launched after 3 sec."
-            	  echo "3"
-                  sleep 1
-                  echo "2"
-              	  sleep 1
-              	  echo "1"
-              	  sleep 1
-              	  echo "0"
+      echo
+      echo "Done, calculator will be launched after 3 sec."
+      echo "3"
+      sleep 1
+      echo "2"
+      sleep 1
+      echo "1"
+      sleep 1
+      echo "0"
 
-              	  bash menu
-                elif [[ $tou == "Disagree" ]]; then
-              	  echo "Sad :/"
-                      fi
+      bash menu
+      elif [[ $tou == "Disagree" ]]; then
+          echo "Sad :/"
+      fi
               </code>
             </pre>
 
@@ -170,29 +169,30 @@
 
             <pre>
               <code class="prettyprint lang-bash">
-                  #!/bin/bash
+      #!/bin/bash
 
-                  cd SmartCalc/
+      cd SmartCalc/
 
-                  clear
+      clear
 
-                  python3 Scb.py
+      python3 Scb.py
 
-                  python3 menu_list.py
+      python3 menu_list.py
 
-                  read -p "Function? " func #výber funkcie
-                  if [[ $func == "1" ]]; then
-                  	  clear
-                  	  python3 calc.py #spustenie
-                  elif [[ $func == "2" ]]; then
-                  	  clear
-                  	  python3 square.py
-                  elif [[ $func == "3" ]]; then
-                  	  clear
-                  	  python3 rectangle.py
-                  elif [[ $func == "4" ]]; then
-                          clear
-	                  python3 triangle.py</code>
+      read -p "Function? " func #výber funkcie
+      if [[ $func == "1" ]]; then
+          clear
+          python3 calc.py #spustenie
+      elif [[ $func == "2" ]]; then
+          clear
+          python3 square.py
+      elif [[ $func == "3" ]]; then
+          clear
+          python3 rectangle.py
+      elif [[ $func == "4" ]]; then
+              clear
+          python3 triangle.py
+              </code>
             </pre>
 
             <p>
@@ -202,29 +202,30 @@
             </p>
 
             <pre>
-              <code>
-                elif [[ $func == "5" ]]; then
-                	clear
-                	python3 circle.py
-                elif [[ $func == "6" ]]; then
-                	clear
-                	python3 par.py
-                elif [[ $func == "8" ]]; then
-                	clear
+              <code class="prettyprint lang-bash">
+      elif [[ $func == "5" ]]; then
+          clear
+          python3 circle.py
+      elif [[ $func == "6" ]]; then
+          clear
+          python3 par.py
+      elif [[ $func == "8" ]]; then
+          clear
 
-                elif [[ $func == "9" ]]; then
-                	clear
-                	python3 ohms_law.py
-                elif [[ $func == "10" ]]; then
-                	clear
-                	python3 resistor.py
-                fi
+      elif [[ $func == "9" ]]; then
+          clear
+          python3 ohms_law.py
+      elif [[ $func == "10" ]]; then
+          clear
+          python3 resistor.py
+      fi
 
-                echo
-                echo
-                echo
-                echo
-                echo</code>
+      echo
+      echo
+      echo
+      echo
+      echo
+              </code>
             </pre>
 
             <p>
@@ -239,17 +240,45 @@
             <p>
               Prvý napísaný skript programu SmartCalc
             </p>
+            <pre>
+              <code class="prettyprint lang-python">
+      #!/usr/bin/python3.6
+      # -*- coding: utf-8 -*-
 
-            <img class="img-fluid" src="../img/clc.png">
+      import os
+      from colorama import init, Fore, Back, Style
+      from definitions import eoc
+      from banner import bo
 
+      print(bo)
+
+      o = input("Operation? [+,-,*,/]")
+      if str(o) == "-":
+          print(Fore.RED+("Difference u can do with summary of negative number"))
+      elif str(o) == "/":
+          dividend = input("Enter dividend: ")
+          denominator = input("Enter denominator: ")
+          division = (float(dividend) / float(denominator))
+          print(division)
+          eoc()
+              </code>
+            </pre>
             <p>
               Importoval som "os" aby som mohol vykonávať príkazy konkrétne dostať sa do zložky SmartCalc a znova spustiť. Potom sa vás <a href='#menu'>menu.sh</a> spýta akú
               operáciu chcete vykonať.
             </p>
+            <pre>
+              <code class="prettyprint lang-python">
+      print (Fore.BLUE+("Enter numbers, to end press Enter without inserting number")+Fore.WHITE)
 
-            <img class="img-fluid" src="../img/clc2.png">
+      total = 0
+      difference = 0
+      multiply = 1
 
-            <table style="margin-top: 2cm;border-collapse: separate; border: #000000 2px">
+      count = 0
+              </code>
+            </pre>
+            <table style="margin-top: 25px;border-collapse: separate; border: #000000 2px">
               <tr>
                 <th>Operácia</th>
                 <th>+</th>
@@ -277,14 +306,50 @@
               Toto je tabulka operácii a ako som to vpísal do skriptu.
             </blockquote>
 
-            <img class="img-fluid" src="../img/clc3.png">
+            <pre>
+              <code class="prettyprint lang-python">
+      while True:
+        line = input("Number:")
+      if line:
+        try:
+            number = float(line)
+        except ValueError as verr:
+            print(Fore.RED+str(verr))
+            print(Fore.WHITE)
+            continue
+        except TypeError as terr:
+            print(Fore.RED+str(terr))
+            print(Fore.WHITE)
+            continue
+        else:
+            break
+              </code>
+            </pre>
 
             <p>
               Teraz tu máme srdce kalkulačky, táto časť (tento while) spracováva operácie (okrem delenia, to sa nachádza na predošlom obrázku).
               Po while tu máme ďalší ifovník ktorý určuje čo chcete vyprintovať.
             </p>
 
-            <img class="img-fluid" src="../img/clc4.png">
+            <pre>
+              <code class="prettyprint lang-python">
+      total += number
+      count += 1
+      multiply *= number
+
+      if str(o) == "+":
+      		print("Summary is: ",total)
+      elif str(o) == "-":
+      		print("Difference is: ", total)
+      elif str(o) == "*":
+      		print("Multiply is: ", multiply)
+      elif str(o) == "/":
+      		print(float(division))
+      else:
+      		print("Invalid operation")
+      eoc()
+              </code>
+            </pre>
 
             <p>
               V tejto časi máme koniec ifovníku a zvolanie funkcie "eoc". Funkcia eoc je použitá vo všetkých skriptoch kalkulačky.
@@ -301,7 +366,28 @@
               </b>
             </p>
 
-            <img class="img-fluid" src="../img/ol1.png">
+            <pre>
+              <code class="prettyprint lang-python">
+      #!/usr/bin/python3
+
+      Import os
+      From definitions import eoc
+      From banner import ol
+
+      Print(ol)
+
+      Print ("			")
+      Print ("""If value is unknown, type "?" """)
+      Print ("			")
+
+      While True:
+          try:
+              R = input("Resistence = ")
+              U = input("Voltage = ")
+              I = input("Current = ")
+              print(" ")
+              </code>
+            </pre>
 
             <p>
               Importoval som "os" aby som mohol vykonávať príkazy, konkrétne dostať sa do zložky SmartCalc a znova spustiť
@@ -311,7 +397,26 @@
               že pokiaľ je vám veličina neznáma napíšte "?".
             </p>
 
-            <img class="img-fluid" src="../img/ol2.png">
+            <pre>
+              <code class="prettyprint lang-python">
+              if R == "?":
+                  R = float(U)/float(I)
+                  print("Resistence is:",  R ,"Ω")
+              elif U =="?":
+                  U = float(R)*float(I)
+                  print("Voltage is:", U ,"V")
+              elif I =="?":
+                  I = float(U)/float(R)
+                  print("Current is:", I ,"A")
+                  P = float(U)*float(I)
+                  print("Perfomance is:",P,"W")
+          except ValueError as verr:
+              print(verr)
+              continue
+          break
+      eoc()
+              </code>
+            </pre>
 
             <p>
               Druhá a tá hlavná časť skriptu spočíva v tom, že sa vás program spýta na hodnoty veličín, ako som spomínal vyššie pre neznámu
