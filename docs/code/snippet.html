@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
   </head>
 
@@ -98,15 +99,58 @@
               Na začiatok by som predstavil script "Install.sh". Bol to nenahraditeľný skript tohto programu, bez jeho vykonania nebolo možné
               používať kalkulačku SmartCalc avšak nedávno som ho nahradil inštalačným balíkom .deb (Slúžia na inštalaćiu programov v Debiane - distribúcia Linuxu).
             </p>
+            <pre>
+              <code>
+                #!/bin/bash
 
-            <img class="img-fluid" src="../img/inst1.png">
+                clear
+
+                echo Installing
+                echo
+                chmod +x terms_of_use.py
+
+                python3 terms_of_use.py
+
+                read -p "[Agree/Disagree]" tou #tou = terms of use
+                if [[ $tou == "Agree" ]]; then
+                sudo apt-get install python3
+                sudo apt-get install python3-pip
+                sudo pip3 install colorama
+                sudo pip3 install math
+                chmod +x *
+                sudo mkdir /etc/SmartCalc/
+                sudo cp * /etc/SmartCalc/
+                sudo cp SmartCalc /bin
+                sudo chmod 777 /etc/SmartCalc/
+                sudo cp SmartCalc.desktop /usr/share/applications
+
+                clear
+            </code>
+            </pre>
 
             <p>
               Ako môžete vidieť, dal som ifovník ktorý sa vás pýta či šúhlasíte s podmienkamy používania, ak požívatel súhlasí script nainštaluje potrebné
               balíky ktoré sú potrebné na správne fungovanie programu a nasledne spusti <a href='#menu'>menu.sh</a>.
             </p>
 
-            <img class="img-fluid" src="../img/inst2.png">
+            <pre>
+              <code>
+                  echo
+                  echo "Done, calculator will be launched after 3 sec."
+            	  echo "3"
+                  sleep 1
+                  echo "2"
+              	  sleep 1
+              	  echo "1"
+              	  sleep 1
+              	  echo "0"
+
+              	  bash menu
+                elif [[ $tou == "Disagree" ]]; then
+              	  echo "Sad :/"
+                      fi
+              </code>
+            </pre>
 
             <p>
               A ak nesúhlasíte s podmienkami používania, program vám napíše "Sad :/". Else by tam nemohlo byť lebo keby používatel zadal napríklad "dfjbjk" bralo by to ako "Disagree".
@@ -122,7 +166,32 @@
               Ako ďalšie by som predstavil script Menu.sh
             </p>
 
-            <img class="img-fluid" src="../img/mn.png">
+            <pre>
+              <code>
+                  #!/bin/bash
+
+                  cd SmartCalc/
+
+                  clear
+
+                  python3 Scb.py
+
+                  python3 menu_list.py
+
+                  read -p "Function? " func #výber funkcie
+                  if [[ $func == "1" ]]; then
+                  	  clear
+                  	  python3 calc.py #spustenie
+                  elif [[ $func == "2" ]]; then
+                  	  clear
+                  	  python3 square.py
+                  elif [[ $func == "3" ]]; then
+                  	  clear
+                  	  python3 rectangle.py
+                  elif [[ $func == "4" ]]; then
+                          clear
+	                  python3 triangle.py</code>
+            </pre>
 
             <p>
               Menu.sh slúži ako menu vštkých skriptov, preto sa to tak volá. Keď spustíte SmartCalc pomocou ikony tak sa vykoná práve tento skript,
@@ -130,7 +199,31 @@
               všetky možnosti. Zvyšok je 'ifovník' pri ktorom je každý elif jeden skript.
             </p>
 
-            <img class="img-fluid" src="../img/mn2.png">
+            <pre>
+              <code>
+                elif [[ $func == "5" ]]; then
+                	clear
+                	python3 circle.py
+                elif [[ $func == "6" ]]; then
+                	clear
+                	python3 par.py
+                elif [[ $func == "8" ]]; then
+                	clear
+
+                elif [[ $func == "9" ]]; then
+                	clear
+                	python3 ohms_law.py
+                elif [[ $func == "10" ]]; then
+                	clear
+                	python3 resistor.py
+                fi
+
+                echo
+                echo
+                echo
+                echo
+                echo</code>
+            </pre>
 
             <p>
               Koniec skriptu teda 5 krát echo je zbytočné lebo si to všimnete iba keď zle zadáte možnosť (nie ako else), teda by vás ifovník nehodil do
