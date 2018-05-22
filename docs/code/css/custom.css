@@ -16,5 +16,10 @@ pre {
 }
 code {
  font-family: Ubuntu;
- background-color:#eff0f1
+ background-color:#eff0f1;
+ word-spacing: 5px;
+}
+
+p h1 h2 h3 h4 blockquote table {
+ font-family: Ubuntu;
 }
