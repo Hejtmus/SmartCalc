@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Filip Holcik">
+
+    <title>SmartCalc</title>
+    <link href="img/live" rel="icon" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">SmartCalc</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">O SmartCalc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Čo SmartCalc ponúka</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#source">Zdrojový kód</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#feedback">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex full">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Základné operácie</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto"
+              <div id="dc">
+                  <p>Základné operácie</p>
+                  <p id="mopr">Vyber operáciu</p>
+                  <select>
+                      <option onclick="document.getElementById('mopr').innerHTML = ('Vyber operáciu'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'none';document.getElementById('rob').style.display = 'none'; op = 1" selected="selected">Zatiaľ si si nevybral/a</option>
+                      <option onclick="document.getElementById('mopr').innerHTML = ('Sčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 2">Sčítavanie</option>
+                      <option onclick="document.getElementById('mopr').innerHTML = ('Odčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 3">Odčítavanie</option>
+                      <option onclick="document.getElementById('mopr').innerHTML = ('Násobenie'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 4">Násobenie</option>
+                      <option onclick="document.getElementById('mopr').innerHTML = ('Delenie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 5">Delenie</option>
+                  </select>
+                  <div class="text-center">
+                      <input style="display: none" type="number" name="1" id="fst" placeholder="Číslo">
+                      <input style="display: none" type="number" name="2" id="scnd" placeholder="Číslo">
+                      <p id="mlt">0</p>
+                  </div>
+              </div>
+              <button class="btn btn-primary btn-xl js-scroll-trigger" style="display: none" id="rob" onclick="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">Rob!</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-dark text-white d-flex" id="dwn">
+      <div class="container text-center">
+        <h2 class="mb-4">Stiahnite si SmartCalc!</h2>
+        <a class="btn btn-light btn-xl sr-button btn-primary" href="https://github.com/Hejtmus/SmartCalc/raw/master/smartcalc_0.2.0-4_amd64.deb">Stiahni .deb!</a>
+      </div>
+    </section>
+
+    <footer style="margin-top: 15px" class="d-flex">
+      <div class="container my-auto d-flex text-center">
+        <p class="copyright text-muted">Copyright &copy; hejtmus.github.io/SmartCalc 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/creative.min.js"></script>
+    <script src="logic.js"></script>
+
+  </body>
+
+</html>
