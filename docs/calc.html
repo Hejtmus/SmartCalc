@@ -64,9 +64,8 @@
           </div>
           <div class="col-lg-8 mx-auto text-center"
               <div id="dc">
-                  <p>Základné operácie</p>
                   <p id="mopr">Vyber operáciu</p>
-                  <select class="text-center" id="mode" onchange="calcm()">
+                  <select class="text-center" id="mode" onchange="calcm()" style="margin: 2%">
                       <option value="" onsubmit="document.getElementById('mopr').innerHTML = ('Vyber operáciu'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'none';document.getElementById('rob').style.display = 'none'; op = 1" selected="selected">Zatiaľ si si nevybral/a</option>
                       <option value="pl" onsubmit="document.getElementById('mopr').innerHTML = ('Sčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 2">Sčítavanie</option>
                       <option value="mi" onselect="document.getElementById('mopr').innerHTML = ('Odčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 3">Odčítavanie</option>
@@ -76,7 +75,7 @@
                   <div class="text-center">
                       <input style="visibility: hidden;: hidden" type="number" name="1" id="fst" placeholder="Číslo">
                       <input style="visibility: hidden" type="number" name="2" id="scnd" placeholder="Číslo">
-                      <p id="mlt">0</p>
+                      <h2 id="mlt" style="margin: 2%">0</h2>
                       <button class="btn btn-primary btn-xl js-scroll-trigger" style="visibility: hidden;" id="rob" onclick="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">Rob!</button>
                   </div>
               </div>
