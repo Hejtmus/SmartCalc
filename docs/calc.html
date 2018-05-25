@@ -22,7 +22,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" onload="calcm()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -62,24 +62,24 @@
             </h1>
             <hr>
           </div>
-          <div class="col-lg-8 mx-auto"
+          <div class="col-lg-8 mx-auto text-center"
               <div id="dc">
                   <p>Základné operácie</p>
                   <p id="mopr">Vyber operáciu</p>
-                  <select>
-                      <option onclick="document.getElementById('mopr').innerHTML = ('Vyber operáciu'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'none';document.getElementById('rob').style.display = 'none'; op = 1" selected="selected">Zatiaľ si si nevybral/a</option>
-                      <option onclick="document.getElementById('mopr').innerHTML = ('Sčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 2">Sčítavanie</option>
-                      <option onclick="document.getElementById('mopr').innerHTML = ('Odčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 3">Odčítavanie</option>
-                      <option onclick="document.getElementById('mopr').innerHTML = ('Násobenie'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 4">Násobenie</option>
-                      <option onclick="document.getElementById('mopr').innerHTML = ('Delenie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 5">Delenie</option>
+                  <select class="text-center" id="mode" onchange="calcm()">
+                      <option value="" onsubmit="document.getElementById('mopr').innerHTML = ('Vyber operáciu'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'none';document.getElementById('rob').style.display = 'none'; op = 1" selected="selected">Zatiaľ si si nevybral/a</option>
+                      <option value="pl" onsubmit="document.getElementById('mopr').innerHTML = ('Sčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 2">Sčítavanie</option>
+                      <option value="mi" onselect="document.getElementById('mopr').innerHTML = ('Odčítavanie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block';op = 3">Odčítavanie</option>
+                      <option value="ti" onselect="document.getElementById('mopr').innerHTML = ('Násobenie'); document.getElementById('scnd').style.display = 'none'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 4">Násobenie</option>
+                      <option value="di" onselect="document.getElementById('mopr').innerHTML = ('delenie'); document.getElementById('scnd').style.display = 'block'; document.getElementById('fst').style.display = 'block'; document.getElementById('rob').style.display = 'block'; op = 5">Delenie</option>
                   </select>
                   <div class="text-center">
-                      <input style="display: none" type="number" name="1" id="fst" placeholder="Číslo">
-                      <input style="display: none" type="number" name="2" id="scnd" placeholder="Číslo">
+                      <input style="visibility: hidden;: hidden" type="number" name="1" id="fst" placeholder="Číslo">
+                      <input style="visibility: hidden" type="number" name="2" id="scnd" placeholder="Číslo">
                       <p id="mlt">0</p>
+                      <button class="btn btn-primary btn-xl js-scroll-trigger" style="visibility: hidden;" id="rob" onclick="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">Rob!</button>
                   </div>
               </div>
-              <button class="btn btn-primary btn-xl js-scroll-trigger" style="display: none" id="rob" onclick="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">Rob!</button>
           </div>
         </div>
       </div>

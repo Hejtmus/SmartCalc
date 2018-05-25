@@ -82,3 +82,46 @@ function bmi_hlt(a) {
     }
 }
 
+function calcm() {
+    var mode = document.getElementById("mode");
+    var slct = mode.options[mode.selectedIndex].value;
+    if (slct === 'pl') {
+        document.getElementById('mlt').innerHTML = ('');
+        document.getElementById('fst').style.visibility = 'visible';
+        document.getElementById('scnd').style.visibility = 'visible';
+        document.getElementById('rob').style.visibility = 'visible';
+        op = 2;
+    }
+
+    else if (slct === 'mi')  {
+        document.getElementById('mlt').innerHTML = ('');
+        document.getElementById('fst').style.visibility = 'visible';
+        document.getElementById('scnd').style.visibility = 'visible';
+        document.getElementById('rob').style.visibility = 'visible';
+        op = 3;
+    }
+
+    else if (slct === 'ti') {
+        document.getElementById('mlt').innerHTML = ('');
+        document.getElementById('fst').style.visibility = 'visible';
+        document.getElementById('scnd').style.visibility = 'hidden';
+        document.getElementById('rob').style.visibility = 'visible';
+        op = 4;
+    }
+
+    else if (slct === 'di') {
+        document.getElementById('mlt').innerHTML = ('');
+        document.getElementById('fst').style.visibility = 'visible';
+        document.getElementById('scnd').style.visibility = 'visible';
+        document.getElementById('rob').style.visibility = 'visible';
+        op = 5;
+    }
+
+    else {
+        document.getElementById('mlt').innerHTML = ('Vyber si operáciu');
+        document.getElementById('fst').style.visibility = 'hidden';
+        document.getElementById('scnd').style.visibility = 'hidden';
+        document.getElementById('rob').style.visibility = 'hidden';
+        op = 1;
+    }
+}
