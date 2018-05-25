@@ -17,8 +17,8 @@
 */
 
 
-var x = 0
-var op
+var x = 0;
+var op;
 
 function oprt(x, y) {
     if (op == 2){
@@ -62,17 +62,20 @@ function rectangle(a, b) {
 
 }
 
-//function drop() {
-//    document.getElementById("myDropdown").classList.toggle("show");
-//}
-
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+function drop(d) {
+document.getElementById(d).classList.toggle("show");
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
+}
 }
 
 function bmi(a, b) {

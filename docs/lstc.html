@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Filip Holcik">
+
+    <title>SmartCalc</title>
+    <link href="img/live" rel="icon" type="image/png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="startbootstrap-clean-blog-gh-pages/css/custom.css">
+
+  </head>
+
+  <body id="page-top" onload="calcm()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href=".">SmartCalc</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#bo">Základné operácie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Čo SmartCalc ponúka</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#source">Zdrojový kód</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex full" id="bo">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Všetky operácie</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto text-center">
+            <ul class="list-inline">
+              <li class="nav-item">
+                <a class="btn btn-block btn-outline-danger">Základné operácie</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-header btn btn-block btn-outline-danger dropbtn" onclick="drop('geo')">
+                  Geometria
+                </a>
+                <div id="geo" class="dropdown-menu">
+                  <a>Štvorec</a>
+                  <a>Štvoruholník</a>
+                  <a>Trojuholník</a>
+                  <a>Kruh</a>
+                  <a>Guľa</a>
+                </div>
+              </li>
+              <li>
+                Mocniny a odmocniny
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-header btn btn-block btn-outline-danger dropbtn" onclick="drop('ele')">
+                  Elektrotechnika
+                </a>
+                <div id="ele" class="dropdown-menu">
+                  <a>Ohmov zákon</a>
+                  <a>Rezistory</a>
+                  <a>Kapacitory</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-dark text-white d-flex" id="dwn">
+      <div class="container text-center">
+        <h2 class="mb-4">Stiahnite si SmartCalc!</h2>
+        <a class="btn btn-light btn-xl sr-button btn-primary" href="https://github.com/Hejtmus/SmartCalc/raw/master/smartcalc_0.2.0-4_amd64.deb">Stiahni .deb!</a>
+      </div>
+    </section>
+
+    <footer style="margin-top: 15px" class="d-flex">
+      <div class="container my-auto d-flex text-center">
+        <p class="copyright text-muted">Copyright &copy; hejtmus.github.io/SmartCalc 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/creative.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="terminal.js"></script>
+
+  </body>
+
+</html>
