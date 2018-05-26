@@ -33,7 +33,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
     var output_ = document.querySelector(outputContainer);
 
     const CMDS_ = [
-        'cat', 'clear', 'clock', 'date', 'echo', 'help', 'uname', 'whoami'
+        'cat', 'clear', 'clock', 'date', 'echo', 'help', 'uname', 'whoami','ls',
     ];
 
     var fs_ = null;
@@ -157,12 +157,15 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
                         result += prop + ": " + codehelper_ip[prop] + "<br>";
                     output(result);
                     break;
+                case 'ls':
+                    output(('ls').exec);
+                    break;
                 default:
                     if (cmd) {
                         output(cmd + ': command not found');
                     }
             };
-
+            window.scrollTo(0, getDocHeight_());
             this.value = ''; // Clear/setup line for next input.
         }
     }
