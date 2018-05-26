@@ -33,7 +33,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
     var output_ = document.querySelector(outputContainer);
 
     const CMDS_ = [
-        'cat', 'clear', 'clock', 'date', 'echo', 'help', 'uname', 'whoami','ls',
+        'cat', 'clear', 'date', 'echo', 'help', 'uname', 'whoami','ls',
     ];
 
     var fs_ = null;
@@ -119,26 +119,21 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
                 case 'cat':
                     var url = args.join(' ');
                     if (!url) {
-                        output('Usage: ' + cmd + ' https://s.codepen.io/...');
-                        output('Example: ' + cmd + ' https://s.codepen.io/AndrewBarfield/pen/LEbPJx.js');
+                        output('Použitie: ' + cmd + ' https://s.codepen.io/...');
+                        output('Príklad: ' + cmd + ' https://s.codepen.io/AndrewBarfield/pen/LEbPJx.js');
                         break;
                     }
                     $.get( url, function(data) {
                         var encodedStr = data.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
                             return '&#'+i.charCodeAt(0)+';';
                         });
-                        output('<pre>' + encodedStr + '</pre>');
+                        output('<pre><code class="prettyprint lang-html">' + encodedStr + '</code></pre>');
                     });
                     break;
                 case 'clear':
                     output_.innerHTML = '';
                     this.value = '';
                     return;
-                case 'clock':
-                    var appendDiv = jQuery($('.clock-container')[0].outerHTML);
-                    appendDiv.attr('style', 'display:inline-block');
-                    output_.appendChild(appendDiv[0]);
-                    break;
                 case 'date':
                     output( new Date() );
                     break;
@@ -158,8 +153,35 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
                     output(result);
                     break;
                 case 'ls':
-                    output($.get('ls.php'));
+                    var url = args.join(' ');
+                    if (!url) {
+                        output('Použitie: ' + cmd + ' cesta');
+                        output('Príklad: ' + cmd + ' /usr/share');
+                        break;
+                    }
+                    $.get( url, function(data) {
+                        var encodedStr = data.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+                            return '&#'+i.charCodeAt(0)+';';
+                        });
+                        output();
+                    });
                     break;
+                /*case 'python':
+                    var url = args.join(' ');
+                    if (!url) {
+                        output('Použitie: ' + cmd + ' python subor');
+                        output('Príklad: ' + cmd + ' payload.py');
+                        break;
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: { param: text}
+                    }).done(function(o) {
+                        console.log(data);
+                        console.log(text);
+                    });
+                    };*/
                 default:
                     if (cmd) {
                         output(cmd + ': command not found');
