@@ -149,7 +149,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
                     output('<div class="ls-files">' + CMDS_.join('<br>') + '</div>');
                     break;
                 case 'uname':
-                    output(navigator.appVersion);
+                    output(/*navigator.appVersion*/ 'Linux 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux');
                     break;
                 case 'whoami':
                     var result = "<img src=\"" + codehelper_ip["Flag"]+ "\"><br><br>";
@@ -158,7 +158,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
                     output(result);
                     break;
                 case 'ls':
-                    output(('ls').exec);
+                    output($.get('ls.php'));
                     break;
                 default:
                     if (cmd) {
