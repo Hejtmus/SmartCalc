@@ -17,24 +17,24 @@
 */
 
 
-var x = 0;
-var op;
+let x = 0;
+let op;
 
 function oprt(x, y) {
-    if (op == 2){
+    if (op === 2){
         return parseFloat(x) + parseFloat(y)
     }
-    else if (op == 3){
+    else if (op === 3){
         return x - y
     }
-    else if (op == 4){
+    else if (op === 4){
         return multiply(x)
     }
     else{
-        if (x == 0){
+        if (x === 0){
             return 1 / y
         }
-        else if (y == 0){
+        else if (y === 0){
             return 'Nulou sa nedelí'
         }
         else{
@@ -44,22 +44,47 @@ function oprt(x, y) {
 }
 
 function multiply(y) {
-    if (x == 0) {
-        x = y
+    if (x === 0) {
+        x = y;
         return x
     }
     else {
-        x *= y
+        x *= y;
         return x
     }
 
 }
 
 function rectangle(a, b) {
-    circ = (2 * a) + (2 * b)
-    cont = a * b
+    circ = (2 * a) + (2 * b);
+    cont = a * b;
     return "Obvod = " + circ + " Obsah = " + cont
 
+}
+
+function ohm(r, u, i) {
+    if (r === '?') {
+        r = u / i
+    }
+    else if (u === '?') {
+        u = i * r
+    }
+    else if (i === '?') {
+        i = u / r
+    }
+    else if (r === '' || u === '' || i === '') {
+        return 'Nesmie byť žiadne prázdne polie'
+    }
+    else {
+        return 'Niečo nieje v poriadku'
+    }
+    p = u * i;
+    return '<table style="width: 99%">' +
+        '<tr><th>Odpor</th><td>'+ r +'</td></tr>' +
+        '<tr><th>Napätie</th><td>'+ u +'</td></tr>' +
+        '<tr><th>Prúd</th><td>'+ i +'</td></tr>' +
+        '<tr><th>Výkon</th><td>'+ p +'</td></tr>' +
+        '</table>'
 }
 
 function drop(d) {
@@ -79,8 +104,8 @@ window.onclick = function(event) {
 }
 
 function bmi(a, b) {
-    b = parseFloat(b)
-    a /= 100
+    b = parseFloat(b);
+    a /= 100;
     return (b) / (a ** 2)
 }
 function bmi_hlt(a) {
