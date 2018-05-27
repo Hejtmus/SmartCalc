@@ -80,10 +80,10 @@ function ohm(r, u, i) {
     }
     p = u * i;
     return '<table style="width: 99%">' +
-        '<tr><th>Odpor</th><td>'+ r +'</td></tr>' +
-        '<tr><th>Napätie</th><td>'+ u +'</td></tr>' +
-        '<tr><th>Prúd</th><td>'+ i +'</td></tr>' +
-        '<tr><th>Výkon</th><td>'+ p +'</td></tr>' +
+        '<tr><th>Odpor</th><td>'+ r +'Ω</td></tr>' +
+        '<tr><th>Napätie</th><td>'+ u +'V</td></tr>' +
+        '<tr><th>Prúd</th><td>'+ i +'A</td></tr>' +
+        '<tr><th>Výkon</th><td>'+ p +'W</td></tr>' +
         '</table>'
 }
 
