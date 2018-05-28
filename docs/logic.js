@@ -62,15 +62,18 @@ function rectangle(a, b) {
 
 }
 
-function ohm(r, u, i) {
+function ohm(r, u, i, dcm=3) {
     if (r === '?') {
-        r = u / i
+        r = u / i;
+        r = r.toFixed(dcm);
     }
     else if (u === '?') {
-        u = i * r
+        u = i * r;
+        u = u.toFixed(dcm);
     }
     else if (i === '?') {
-        i = u / r
+        i = u / r;
+        i = i.toFixed(dcm);
     }
     else if (r === '' || u === '' || i === '') {
         return 'Nesmie byť žiadne prázdne polie'
@@ -79,6 +82,7 @@ function ohm(r, u, i) {
         return 'Niečo nieje v poriadku'
     }
     p = u * i;
+    p = p.toFixed(dcm);
     return '<table style="width: 99%">' +
         '<tr><th>Odpor</th><td>'+ r +'Ω</td></tr>' +
         '<tr><th>Napätie</th><td>'+ u +'V</td></tr>' +
@@ -171,4 +175,11 @@ function calcm() {
         document.getElementById('rob').style.visibility = 'hidden';
         op = 1;
     }
+}
+
+function visin(act, prop) {
+    $( "#" +  act ).click(function() {
+        $( "#" +  prop ).toggle();
+    });
+
 }

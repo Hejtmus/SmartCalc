@@ -23,7 +23,7 @@
 
   </head>
 
-  <body id="page-top" onload="document.getElementById('fin').innerHTML  = ohm(document.getElementById('r').value,document.getElementById('u').value, document.getElementById('i').value)">
+  <body id="page-top" onload="document.getElementById('fin').innerHTML  = ohm(document.getElementById('r').value,document.getElementById('u').value, document.getElementById('i').value); visin('vistog', 'decim')">
 
   <div id="nav">
 
@@ -36,7 +36,8 @@
               <strong>Ohmov zákon</strong>
             </h1>
             <hr>
-            <p>Hodnoty ktoré sú známe vypíš a na miesto neznámej daj '?'</p>
+            <p>Hodnoty ktoré sú známe vypíšte a na miesto neznámej daj '?'. Ak chcete zmeniť počet destiných miest (predvolené je 3) kliknite <a id="vistog" href="#">sem</a>.</p>
+            <input name="decimal" id="decim" placeholder="3" style="display: none">
           </div>
           <div class="col-lg-8 mx-auto text-center bmargin">
             <div class="col-lg-8 mx-auto text-center" onchange="document.getElementById('fin').innerHTML  = ohm(document.getElementById('r').value,document.getElementById('u').value, document.getElementById('i').value)">
