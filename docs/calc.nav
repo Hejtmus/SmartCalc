@@ -5,14 +5,41 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item js-scroll-trigger">
-          <a class="nav-link js-scroll-trigger" href="#bo">Základné operácie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
-        </li>
-      </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item bmargin">
+                <a class="nav-link " href="calc.html">
+                  Základné operácie
+                </a>
+              </li>
+              <li class="nav-item dropdown bmargin" >
+                <a class="dropdown-header dropbtn nav-link" onclick="drop('geo')">
+                  Geometria
+                </a>
+                <div id="geo" class="dropdown-menu text-center">
+                  <a href="sqr.html">Štvorec</a>
+                  <a href="rect.html">Štvoruholník</a>
+                  <a href="tria.html">Trojuholník</a>
+                  <a href="circ.html">Kruh</a>
+                  <a href="sphere.html">Guľa</a>
+                </div>
+              </li>
+              <li class="nav-item bmargin">
+                <a class="nav-link" href="par.html">
+                  Mocniny a odmocniny
+                </a>
+              </li>
+              <li class="nav-item dropdown bmargin">
+                <a class="dropdown-header nav-link dropbtn" onclick="drop('ele')">
+                  Elektrotechnika
+                </a>
+                <div id="ele" class="dropdown-menu text-center">
+                  <a href="ohml.html">Ohmov zákon</a>
+                  <a href="resis.html">Rezistory</a>
+                  <a>Kapacitory</a>
+                </div>
+              </li>
+            </ul>
+
     </div>
   </div>
 </nav>
