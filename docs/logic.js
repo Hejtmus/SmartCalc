@@ -30,7 +30,7 @@ function oprt(x, y) {
     else if (op === 4){
         return multiply(x)
     }
-    else{
+    else if (op === 5){
         if (x === 0){
             return 1 / y
         }
@@ -40,6 +40,16 @@ function oprt(x, y) {
         else{
             return x / y
         }
+    }
+    else if (op === 6) {
+        return x  ** y
+    }
+    else if (op === 7) {
+        let s;
+        for (s = 0; s = x; s++) {
+            y = Math.sqrt(y);
+        }
+        return y
     }
 }
 
@@ -65,15 +75,15 @@ function rectangle(a, b) {
 function ohm(r, u, i, dcm=3) {
     if (r === '?') {
         r = u / i;
-        r = r.toFixed(dcm);
+        r = osd(r, dcm);
     }
     else if (u === '?') {
         u = i * r;
-        u = u.toFixed(dcm);
+        u = osd(u, dcm);
     }
     else if (i === '?') {
         i = u / r;
-        i = i.toFixed(dcm);
+        i = osd(i, dcm)
     }
     else if (r === '' || u === '' || i === '') {
         return 'Nesmie byť žiadne prázdne polie'
@@ -82,7 +92,7 @@ function ohm(r, u, i, dcm=3) {
         return 'Niečo nieje v poriadku'
     }
     p = u * i;
-    p = p.toFixed(dcm);
+    p = osd(p, dcm);
     return '<table style="width: 99%">' +
         '<tr><th>Odpor</th><td>'+ r +'Ω</td></tr>' +
         '<tr><th>Napätie</th><td>'+ u +'V</td></tr>' +
@@ -168,6 +178,14 @@ function calcm() {
         op = 5;
     }
 
+    else if (slct === 'po') {
+        op = 6;
+    }
+
+    else if (slct === 'po') {
+        op = 7;
+    }
+
     else {
         document.getElementById('mlt').innerHTML = ('Vyber si operáciu');
         document.getElementById('fst').style.visibility = 'hidden';
@@ -182,4 +200,11 @@ function visin(act, prop) {
         $( "#" +  prop ).toggle();
     });
 
+}
+
+function osd(dec, dcm=3) {
+    if (dec < 0) {
+        dec = dec.toFixed(dcm)
+    }
+    return dec
 }
