@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<link rel="stylesheet" href="code/css/custom.css">
+<nav class="navbar navbar-expand-lg navbar-light" style='position:relative' id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href=".">SmartCalc</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +16,7 @@
                 <a class="dropdown-header dropbtn nav-link" onclick="drop('geo')">
                   Geometria
                 </a>
-                <div id="geo" class="dropdown-menu text-center">
+                <div id="geo" class="dropdown-menu text-center tgl">
                   <a href="sqr.html">Štvorec</a>
                   <a href="rect.html">Štvoruholník</a>
                   <a href="tria.html">Trojuholník</a>
@@ -32,7 +33,7 @@
                 <a class="dropdown-header nav-link dropbtn" onclick="drop('ele')">
                   Elektrotechnika
                 </a>
-                <div id="ele" class="dropdown-menu text-center">
+                <div id="ele" class="dropdown-menu text-center tgl">
                   <a href="ohml.html">Ohmov zákon</a>
                   <a href="resis.html">Rezistory</a>
                   <a>Kapacitory</a>
@@ -44,3 +45,8 @@
   </div>
 </nav>
 <script src="js/creative.min.js"></script>
+<script>
+    $( ".tgl" ).click(function() {
+        $( ".fixed-top" ).toggle();
+    });
+</script>
