@@ -67,6 +67,12 @@ function multiply(y) {
 
 }
 
+function square(a) {
+    circ = 4 * a;
+    cont = a ** 2;
+    return "Obvod = " + circ + " Obsah = " + cont
+}
+
 function rectangle(a, b) {
     circ = (2 * a) + (2 * b);
     cont = a * b;
