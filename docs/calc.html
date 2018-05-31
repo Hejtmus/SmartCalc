@@ -40,15 +40,14 @@
           </div>
           <div class="col-lg-8 mx-auto text-center"
               <div id="dc">
-                  <p id="mopr">Vyber operáciu</p>
-                  <select class="text-center" id="mode" onchange="calcm()" style="margin: 2%">
+                  <select class="text-center" id="mode" onchange="calcm();" style="margin: 2%">
                       <option value="" selected="selected">Zatiaľ si si nevybral/a</option>
                       <option value="pl">Sčítavanie</option>
                       <option value="mi">Odčítavanie</option>
                       <option value="ti">Násobenie</option>
                       <option value="di">Delenie</option>
                   </select>
-                  <div class="text-center">
+                  <div class="text-center" onchange="document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">
                       <input style="visibility: hidden;" type="number" name="1" id="fst" placeholder="Číslo">
                       <input style="visibility: hidden" type="number" name="2" id="scnd" placeholder="Číslo">
                       <h2 id="mlt" style="margin: 2%">0</h2>

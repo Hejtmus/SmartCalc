@@ -19,6 +19,7 @@
 
 let x = 0;
 let op;
+let par;
 
 function oprt(x, y) {
     if (op === 2){
@@ -28,7 +29,8 @@ function oprt(x, y) {
         return x - y
     }
     else if (op === 4){
-        return multiply(x)
+        document.getElementById('fst').value = '';
+        return multiply(x);
     }
     else if (op === 5){
         if (x === 0){
@@ -41,10 +43,10 @@ function oprt(x, y) {
             return x / y
         }
     }
-    else if (op === 6) {
+    else if (par === 6) {
         return x  ** y
     }
-    else if (op === 7) {
+    else if (par === 7) {
         let s;
         for (s = 0; s = x; s++) {
             y = Math.sqrt(y);
@@ -179,14 +181,14 @@ function calcm() {
     }
 
     else if (slct === 'po') {
-        op = 6;
+        par = 6;
     }
 
-    else if (slct === 'po') {
-        op = 7;
+    else if (slct === 'sq') {
+        par = 7;
     }
 
-    else {
+    else if (slct === '') {
         document.getElementById('mlt').innerHTML = ('Vyber si operáciu');
         document.getElementById('fst').style.visibility = 'hidden';
         document.getElementById('scnd').style.visibility = 'hidden';
@@ -207,4 +209,17 @@ function osd(dec, dcm=3) {
         dec = dec.toFixed(dcm)
     }
     return dec
+}
+
+function olm() {
+    var mode = document.getElementById("prc");
+    var pr = mode.options[mode.selectedIndex].value;
+    if (pr === 'po') {
+        par = 6;
+    }
+
+    else if (pr === 'sq') {
+        par = 7;
+    }
+
 }
