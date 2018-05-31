@@ -279,29 +279,31 @@
       count = 0
               </code>
             </pre>
-            <table style="margin-top: 25px;border-collapse: separate;width: 100%;">
-              <tr>
-                <th>Operácia</th>
-                <th>+</th>
-                <th>-</th>
-                <th>*</th>
-                <th>/</th>
-              </tr>
-              <tr>
-                <th>Spôsob vykonania</th>
-                <td>+=</td>
-                <td>+=</td>
-                <td>*=</td>
-                <td>div.../deno...</td>
-              </tr>
-              <tr>
-                <th>Komentár</th>
-                <td></td>
-                <td>používateľ vkladá záporné čísla</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
+              <pre>
+                  <table style="margin-top: 25px;border-collapse: separate;width: 100%;">
+                      <tr>
+                        <th>Operácia</th>
+                        <th>+</th>
+                        <th>-</th>
+                        <th>*</th>
+                        <th>/</th>
+                      </tr>
+                      <tr>
+                        <th>Spôsob vykonania</th>
+                        <td>+=</td>
+                        <td>+=</td>
+                        <td>*=</td>
+                        <td>divident/denominator</td>
+                      </tr>
+                      <tr>
+                        <th>Komentár</th>
+                        <td></td>
+                        <td>používateľ vkladá záporné čísla</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </table>
+              </pre>
 
             <blockquote class="blockquote">
               Toto je tabulka operácii a ako som to vpísal do skriptu.
@@ -339,15 +341,15 @@
       multiply *= number
 
       if str(o) == "+":
-      		print("Summary is: ",total)
+          print("Summary is: ",total)
       elif str(o) == "-":
-      		print("Difference is: ", total)
+          print("Difference is: ", total)
       elif str(o) == "*":
-      		print("Multiply is: ", multiply)
+          print("Multiply is: ", multiply)
       elif str(o) == "/":
-      		print(float(division))
+          print(float(division))
       else:
-      		print("Invalid operation")
+          print("Invalid operation")
       eoc()
               </code>
             </pre>
