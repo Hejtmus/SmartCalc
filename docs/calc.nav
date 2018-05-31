@@ -8,11 +8,11 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link " href="calc.html">
+                <a class="nav-link bmargin" href="calc.html">
                   Základné operácie
                 </a>
               </li>
-              <li class="nav-item dropdown" >
+              <li class="nav-item dropdown bmargin" >
                 <a class="dropdown-header dropbtn nav-link" onclick="drop('geo')">
                   Geometria
                 </a>
@@ -25,11 +25,11 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="par.html">
+                <a class="nav-link bmargin" href="par.html">
                   Mocniny a odmocniny
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown bmargin">
                 <a class="dropdown-header nav-link dropbtn" onclick="drop('ele')">
                   Elektrotechnika
                 </a>
@@ -39,7 +39,7 @@
                   <a>Kapacitory</a>
                 </div>
               </li>
-              <li class="nav-item bmargin">
+              <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
               </li>
             </ul>
