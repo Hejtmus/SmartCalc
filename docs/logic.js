@@ -223,3 +223,6 @@ function olm() {
     }
 
 }
+$.get("calc.nav", function(data){
+    $("#nav").replaceWith(data);
+    });
