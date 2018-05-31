@@ -33,14 +33,14 @@
                 <a class="dropdown-header nav-link dropbtn" onclick="drop('ele')">
                   Elektrotechnika
                 </a>
-              <li class="nav-item bmargin">
-                <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
-              </li>
                 <div id="ele" class="dropdown-menu text-center tgl">
                   <a href="ohml.html">Ohmov zákon</a>
                   <a href="resis.html">Rezistory</a>
                   <a>Kapacitory</a>
                 </div>
+              </li>
+              <li class="nav-item bmargin">
+                <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
               </li>
             </ul>
 
