@@ -7,12 +7,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item bmargin">
+              <li class="nav-item">
                 <a class="nav-link " href="calc.html">
                   Základné operácie
                 </a>
               </li>
-              <li class="nav-item dropdown bmargin" >
+              <li class="nav-item dropdown" >
                 <a class="dropdown-header dropbtn nav-link" onclick="drop('geo')">
                   Geometria
                 </a>
@@ -24,15 +24,18 @@
                   <a href="sphere.html">Guľa</a>
                 </div>
               </li>
-              <li class="nav-item bmargin">
+              <li class="nav-item">
                 <a class="nav-link" href="par.html">
                   Mocniny a odmocniny
                 </a>
               </li>
-              <li class="nav-item dropdown bmargin">
+              <li class="nav-item dropdown">
                 <a class="dropdown-header nav-link dropbtn" onclick="drop('ele')">
                   Elektrotechnika
                 </a>
+              <li class="nav-item bmargin">
+                <a class="nav-link js-scroll-trigger" href="#dwn">Stiahnuť</a>
+              </li>
                 <div id="ele" class="dropdown-menu text-center tgl">
                   <a href="ohml.html">Ohmov zákon</a>
                   <a href="resis.html">Rezistory</a>
@@ -45,6 +48,7 @@
   </div>
 </nav>
 <script src="js/creative.min.js"></script>
+
 <script>
     $( ".tgl" ).click(function() {
         $( ".fixed-top" ).toggle();
