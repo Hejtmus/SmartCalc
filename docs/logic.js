@@ -80,6 +80,59 @@ function rectangle(a, b) {
 
 }
 
+function tria(a,b,c) {
+    circ = parseFloat(a) + parseFloat(b) + parseFloat(c);
+    cont = (a * b) / 2;
+}
+
+function triangle(a,b,c) {
+    var mode = document.getElementById("mode");
+    var mode = mode.options[mode.selectedIndex].value;
+    if (mode === '1') {
+        if (a === '' || b === '' || c === '') {
+            return "Nesmie byť žiadne prázdne pole"
+        }
+        else {
+            tria(a,b,c);
+            return '<table style="width: 99%">' +
+            '<tr><th>a</th><td>'+ a +'</td></tr>' +
+            '<tr><th>b</th><td>'+ b +'</td></tr>' +
+            '<tr><th>c</th><td>'+ c +'</td></tr>' +
+            '<tr><th>Obvod</th><td>'+ circ +'</td></tr>' +
+            '<tr><th>Obsah</th><td>'+ cont +'</td></tr>' +
+            '</table>'
+        }
+
+    }
+    else if (mode === '2') {
+        if (a === '?') {
+            a = (c ** 2) - (b ** 2);
+            a = math.sqrt(a)
+        }
+        else if (b === '?') {
+            b = (c ** 2) - (a ** 2);
+            b = math.sqrt(b)
+        }
+        else if (c === '?') {
+            c = (a ** 2) + (b ** 2);
+            c = math.sqrt(c)
+        }
+        else if (r === '' || u === '' || i === '') {
+            return 'Nesmie byť žiadne prázdne pole'
+        }
+        else {
+            return 'Niečo nieje v poriadku'
+        }
+        tria(a,b,c);
+        return '<tr><th>a</th><td>'+ a +'</td></tr>' +
+        '<tr><th>b</th><td>'+ b +'</td></tr>' +
+        '<tr><th>c</th><td>'+ c +'</td></tr>' +
+        '<tr><th>Obvod</th><td>'+ circ +'</td></tr>' +
+        '<tr><th>Obsah</th><td>'+ cont +'</td></tr>' +
+        '</table>'
+    }
+}
+
 function ohm(r, u, i, dcm=3) {
     if (r === '?') {
         r = u / i;
@@ -229,6 +282,7 @@ function olm() {
     }
 
 }
+
 $.get("calc.nav", function(data){
     $("#nav").replaceWith(data);
     });
