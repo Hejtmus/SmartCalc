@@ -94,13 +94,13 @@ function triangle(a,b,c) {
         }
         else {
             tria(a,b,c);
-            return '<pre><table style="width: 99%">' +
+            return '<table style="width: 99%">' +
             '<tr><th>a</th><td>'+ a +'</td></tr>' +
             '<tr><th>b</th><td>'+ b +'</td></tr>' +
             '<tr><th>c</th><td>'+ c +'</td></tr>' +
             '<tr><th>Obvod</th><td>'+ circ +'</td></tr>' +
             '<tr><th>Obsah</th><td>'+ cont +'</td></tr>' +
-            '</table></pre>'
+            '</table>'
         }
 
     }
@@ -124,7 +124,7 @@ function triangle(a,b,c) {
             return 'Niečo nieje v poriadku'
         }
         tria(a,b,c);
-        return '<tr><th>a</th><td>'+ a +'</td></tr>' +
+        return '<table><tr><th>a</th><td>'+ a +'</td></tr>' +
         '<tr><th>b</th><td>'+ b +'</td></tr>' +
         '<tr><th>c</th><td>'+ c +'</td></tr>' +
         '<tr><th>Obvod</th><td>'+ circ +'</td></tr>' +
@@ -154,12 +154,12 @@ function ohm(r, u, i, dcm=3) {
     }
     p = u * i;
     p = osd(p, dcm);
-    return '<pre><table style="width: 99%">' +
+    return '<table style="width: 99%">' +
         '<tr><th>Odpor</th><td>'+ r +'Ω</td></tr>' +
         '<tr><th>Napätie</th><td>'+ u +'V</td></tr>' +
         '<tr><th>Prúd</th><td>'+ i +'A</td></tr>' +
         '<tr><th>Výkon</th><td>'+ p +'W</td></tr>' +
-        '</table></pre>'
+        '</table>'
 }
 
 function drop(d) {
