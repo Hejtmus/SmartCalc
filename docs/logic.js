@@ -17,7 +17,7 @@
 */
 
 
-let x = 0;
+let x = 1;
 let op;
 let par;
 
@@ -57,7 +57,7 @@ function oprt(x, y) {
 
 function multiply(y) {
     if (x === 0) {
-        x = y;
+        x = y
         return x
     }
     else {
