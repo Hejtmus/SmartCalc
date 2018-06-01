@@ -211,7 +211,7 @@ function calcm() {
         document.getElementById('mlt').innerHTML = ('');
         document.getElementById('fst').style.visibility = 'visible';
         document.getElementById('scnd').style.visibility = 'visible';
-        document.getElementById('rob').style.visibility = 'visible';
+        //document.getElementById('rob').style.visibility = 'visible';
         op = 2;
     }
 
@@ -219,7 +219,7 @@ function calcm() {
         document.getElementById('mlt').innerHTML = ('');
         document.getElementById('fst').style.visibility = 'visible';
         document.getElementById('scnd').style.visibility = 'visible';
-        document.getElementById('rob').style.visibility = 'visible';
+        //document.getElementById('rob').style.visibility = 'visible';
         op = 3;
     }
 
@@ -227,7 +227,7 @@ function calcm() {
         document.getElementById('mlt').innerHTML = ('');
         document.getElementById('fst').style.visibility = 'visible';
         document.getElementById('scnd').style.visibility = 'hidden';
-        document.getElementById('rob').style.visibility = 'visible';
+        //document.getElementById('rob').style.visibility = 'visible';
         op = 4;
     }
 
@@ -235,7 +235,7 @@ function calcm() {
         document.getElementById('mlt').innerHTML = ('');
         document.getElementById('fst').style.visibility = 'visible';
         document.getElementById('scnd').style.visibility = 'visible';
-        document.getElementById('rob').style.visibility = 'visible';
+        //document.getElementById('rob').style.visibility = 'visible';
         op = 5;
     }
 
@@ -251,7 +251,7 @@ function calcm() {
         document.getElementById('mlt').innerHTML = ('Vyber si operáciu');
         document.getElementById('fst').style.visibility = 'hidden';
         document.getElementById('scnd').style.visibility = 'hidden';
-        document.getElementById('rob').style.visibility = 'hidden';
+        //document.getElementById('rob').style.visibility = 'hidden';
         op = 1;
     }
 }

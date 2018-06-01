@@ -23,7 +23,7 @@
 
   </head>
 
-  <body id="page-top" onload="calcm()">
+  <body id="page-top" onload="calcm();document.getElementById('mlt').innerHTML = oprt(document.getElementById('fst').value, document.getElementById('scnd').value)">
 
   <div id="nav">
 
@@ -84,11 +84,6 @@
     <script src="js/creative.min.js"></script>
     <script src="logic.js"></script>
     <script src="terminal.js"></script>
-    <script>
-      $.get("calc.nav", function(data){
-          $("#nav").replaceWith(data);
-      });
-  </script>
 
   </body>
 
