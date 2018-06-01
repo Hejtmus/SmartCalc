@@ -28,7 +28,7 @@
   <div id="nav">
 
   </div>
-    <header class="masthead text-center text-white d-flex full" id="bo">
+    <header class="masthead text-center text-white d-flex" id="bo">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -44,7 +44,7 @@
               <input name="res" id="r" placeholder="Odpor">
               <input name="volt" id="u" placeholder="Napätie">
               <input name="cur" id="i" placeholder="Prúd">
-              <h3 id="fin" style="margin: 5%;"></h3>
+              <h3 id="fin" style="margin: 5%"></h3>
             </div>
         </div>
       </div>
@@ -75,11 +75,7 @@
     <script src="js/creative.min.js"></script>
     <script src="logic.js"></script>
     <script src="terminal.js"></script>
-    <script>
-      $.get("calc.nav", function(data){
-          $("#nav").replaceWith(data);
-      });
-  </script>
+
   </body>
 
 </html>
