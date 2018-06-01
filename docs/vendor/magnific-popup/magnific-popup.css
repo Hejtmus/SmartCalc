@@ -458,6 +458,6 @@ header, .color-r {
     height: 100%;
 }
 
-table {
+.table {
     overflow: auto;
 }
