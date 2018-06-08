@@ -283,6 +283,73 @@ function olm() {
 
 }
 
+function circ(r, d, o, s) {
+    let h;
+    if ((r !== '' && d !== '') || (o !== '' && s !== '') || (r !== '' && o !== '') || (d !== '' && s !== '') || (r !== '' && s !== '') || (d !== '' && o !== '')) {
+        return 'Zadaj jeden údaj'
+    }
+
+    else if (r === '' && d === '' && s === '' && o === '') {
+        return 'Zadaj aspoň jeden údaj'
+    }
+
+    else if (s !== '') {
+        h = (s / 3.14);
+        h = Math.sqrt(h);
+        r = h;
+        d = 2 * r;
+    }
+
+    else if (o !== '') {
+        h = o / 3.14;
+        d = h;
+        r = d / 2;
+    }
+
+    else if (d !== '') {
+        r = d / 2;
+    }
+
+    else if (r !== '') {
+        d = 2 * r;
+    }
+
+    o = d * 3.14;
+    s = 3.14 * (r ** 2);
+
+    return '<div class="table"><table style="width: 99%">' +
+        '<tr><th>Priemer</th><td>'+ d +'</td></tr>' +
+        '<tr><th>Polomer</th><td>'+ r +'</td></tr>' +
+        '<tr><th>Dĺžka</th><td>'+ o +'</td></tr>' +
+        '<tr><th>Obsah</th><td>'+ s +'</td></tr>' +
+        '</table></div>'
+}
+
+function sphere(r, d, v) {
+    if (r !== '') {
+        d = r * 2;
+    }
+
+    else if (d !== '') {
+        r = d / 2;
+    }
+
+    else if (v !== '') {
+        r = v / ((4/3) * 3.14);
+        let h;
+        for (h = 0;h = 3;h++) {
+            r = Math.sqrt(r)
+        }
+        d = r * 2
+    }
+    v = ((4/3) * 3.14 * (r ** 3));
+    return '<div class="table"><table style="width: 99%">' +
+        '<tr><th>Priemer</th><td>'+ d +'</td></tr>' +
+        '<tr><th>Polomer</th><td>'+ r +'</td></tr>' +
+        '<tr><th>Objem</th><td>'+ v +'</td></tr>' +
+        '</table></div>'
+}
+
 $.get("calc.nav", function(data){
     $("#nav").replaceWith(data);
     });
