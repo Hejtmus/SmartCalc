@@ -325,9 +325,14 @@ function circ(r, d, o, s) {
         '</table></div>'
 }
 
-function sphere(r, d, v) {
-    if (r !== '') {
-        d = r * 2;
+function sphere(r, d, s, v) {
+
+    if ((r !== '' && d !== '') || (v !== '' && s !== '') || (r !== '' && v !== '') || (d !== '' && s !== '') || (r !== '' && s !== '') || (d !== '' && v !== '')) {
+        return 'Zadaj jeden údaj'
+    }
+
+    else if (r === '' && d === '' && s === '' && v === '') {
+        return 'Zadaj aspoň jeden údaj'
     }
 
     else if (d !== '') {
@@ -336,16 +341,24 @@ function sphere(r, d, v) {
 
     else if (v !== '') {
         r = v / ((4/3) * 3.14);
-        let h;
-        for (h = 0;h = 3;h++) {
-            r = Math.sqrt(r)
-        }
-        d = r * 2
+        r = Math.sqrt(r);
+        r = Math.sqrt(r);
+        r = Math.sqrt(r);
     }
+
+    else if (s !== '') {
+        r = s / 4;
+        r /= 3.14;
+        r = Math.sqrt(r);
+    }
+
+    d = r * 2;
     v = ((4/3) * 3.14 * (r ** 3));
+    s = (4 * 3.14 * (r ** 2));
     return '<div class="table"><table style="width: 99%">' +
         '<tr><th>Priemer</th><td>'+ d +'</td></tr>' +
         '<tr><th>Polomer</th><td>'+ r +'</td></tr>' +
+        '<tr><th>Povrch</th><td>'+ s +'</td></tr>' +
         '<tr><th>Objem</th><td>'+ v +'</td></tr>' +
         '</table></div>'
 }

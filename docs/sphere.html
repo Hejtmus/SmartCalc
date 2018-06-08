@@ -19,11 +19,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/creative.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="startbootstrap-clean-blog-gh-pages/css/custom.css">
+  <link rel="stylesheet" href="code/css/custom.css">
 
 </head>
 
-<body id="page-top" onload="document.getElementById('fin').innerHTML  = sphere(document.getElementById('rs').value,document.getElementById('ds').value, document.getElementById('vs').value)">
+<body id="page-top" onload="document.getElementById('fin').innerHTML  = sphere(document.getElementById('rs').value,document.getElementById('ds').value, document.getElementById('ss').value, document.getElementById('vs').value)">
 
 <div id="nav"></div>
 
@@ -37,9 +37,10 @@
         <hr>
       </div>
       <div class="col-lg-8 mx-auto text-center">
-        <div class="col-lg-8 mx-auto text-center" onchange="document.getElementById('fin').innerHTML  = sphere(document.getElementById('rs').value,document.getElementById('ds').value, document.getElementById('vs').value)">
-          <input name="range" id="rs" placeholder="r">
+        <div class="col-lg-8 mx-auto text-center" onchange="document.getElementById('fin').innerHTML  = sphere(document.getElementById('rs').value,document.getElementById('ds').value, document.getElementById('ss').value, document.getElementById('vs').value)">
           <input name="diameter" id="ds" placeholder="d">
+          <input name="range" id="rs" placeholder="r">
+          <input name="surface" id="ss" placeholder="S">
           <input name="mass" id="vs" placeholder="V">
           <h3 id="fin" style="margin: 5%"></h3>
         </div>
