@@ -1,0 +1,106 @@
+{
+  "name": "smartcalc",
+  "version": "0.2.3",
+  "description": "Clever calc for clever people",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hejtmus/SmartCalc.git"
+  },
+  "keywords": [
+    "smartcalc",
+    "smart",
+    "calc",
+    "formula",
+    "math",
+    "electro"
+  ],
+  "author": {
+    "name": "Filip Holcik",
+    "email": "filip.holcik.official@gmail.com"
+  },
+  "license": "custom <LICENSE>",
+  "homepage": "https://hejtmus.github.io/SmartCalc/",
+  "bugs": {
+    "url": "https://github.com/Hejtmus/SmartCalc/issues"
+  },
+  "main": "./src/electron.js",
+  "devDependencies": {
+    "@2dimensions/flare-js": "^1.0.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "bootstrap": "^4.4.1",
+    "chokidar": "^3.2.1",
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.27.13",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-postcss": "^2.5.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.3.0",
+    "svelte-spa-router": "^2.0.0",
+    "sveltestrap": "^3.2.10"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "rollup -c",
+    "autobuild": "rollup -c -w",
+    "start": "sirv public --single",
+    "start:dev": "sirv public --single --dev",
+    "dev": "run-p start:dev autobuild",
+    "electron": "run-s build electron:pure",
+    "electron:dev": "run-p autobuild electron:pure:dev",
+    "electron:pure": "electron .",
+    "electron:pure:dev": "NODE_ENV=development electron .",
+    "dist:darwin": "run-s build pure-dist-darwin",
+    "dist:linux": "run-s build dist:lin",
+    "pack": "npm build --dir",
+    "dist": "electron-builder -mwl",
+    "dist:lin": "electron-builder -l",
+    "dist:mac": "electron-builder -m",
+    "dist:win": "electron-builder -w"
+  },
+  "build": {
+    "appId": "com.holcik.smartcalc",
+    "productName": "SmartCalc",
+    "directories": {
+      "buildResources": ".",
+      "output": "dist/"
+    },
+    "dmg": {
+      "icon": "assets/app-icon/SmartCalc.icns",
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "icon": "assets/app-icon/SmartCalc.png",
+      "category": "Utility",
+      "synopsis": "Clever calc for clever people",
+      "description": "SmartCalc is my first program, I'm doing it on my own. This build of SmartCalc includes only GUI version.",
+      "desktop": "SmartCalc",
+      "target": [
+        "AppImage",
+        "deb",
+        "snap"
+      ]
+    },
+    "win": {
+      "icon": "assets/app-icon/SmartCalc.ico",
+      "target": "NSIS"
+    }
+  }
+}
